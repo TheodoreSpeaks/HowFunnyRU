@@ -3,7 +3,7 @@ import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
 import NeonButton from "./NeonButton";
-import GptConfig from "../gpt3.json";
+import { requestTranscriptHumorScore } from "../util/useGptRequest";
 
 export default function Microphone(): React.ReactElement {
   const {
@@ -15,18 +15,19 @@ export default function Microphone(): React.ReactElement {
 
   const [startedRecording, setStartedRecording] = useState(false);
   const [fullTranscript, setFullTranscript] = useState("");
-
-  const OpenAI = require('openai-api');
-  const OPENAI_API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
-  const openai = new OpenAI(OPENAI_API_KEY);
+  const [humorScore, setHumorScore] = useState(-1);
 
   useEffect(() => {
     if (!listening && startedRecording) {
       // Pause detected
-      setFullTranscript((fullTranscript) => fullTranscript + " " + transcript);
+      setFullTranscript((fullTranscript) => `${fullTranscript} ${transcript}`);
       SpeechRecognition.startListening();
 
-      requestTranscriptHumorScore();
+      requestTranscriptHumorScore(transcript).then((score) => {
+        if (score != null) {
+          setHumorScore(score);
+        }
+      });
     }
   }, [listening]);
 
@@ -46,20 +47,6 @@ export default function Microphone(): React.ReactElement {
     stopListening();
   };
 
-  const requestTranscriptHumorScore = async () => {
-    if (transcript === "") return;
-
-    const updatedPrompt = GptConfig.prompt + "\nSentence: " + transcript + "\nScore:";
-
-    const configCopy = { ...GptConfig };
-    configCopy.prompt = updatedPrompt
-
-    const response = await openai.complete(configCopy);
-    const score = parseInt(response.data['choices'][0]['text']);
-
-    console.log(score);
-  }
-
   if (!browserSupportsSpeechRecognition) {
     return <>Browser does not support speech recognition!</>;
   }
@@ -73,6 +60,7 @@ export default function Microphone(): React.ReactElement {
       <p>
         {fullTranscript} {transcript}
       </p>
+      {humorScore !== -1 ? <p>Score: {humorScore}</p> : null}
     </div>
   );
 }
