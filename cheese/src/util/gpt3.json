@@ -1,10 +1,10 @@
 {
     "engine": "curie",
-    "prompt": "Give an integer score from 0 to 10 on how funny the following sentence is.\n\nSentence: \"there was a bear then there wasn't a bear\"\nScore: 0\nSentence: \"why were the dogs named rolex and timex because they were watchdogs\"\nScore: 4\nSentence: \"yo momma is so stupid that she stared at a glass of orange juice because it said from concentrate\"\nScore: 8\nSentence: \"why did the chicken cross the road to get to the other side\"\nScore: 3",
+    "prompt": "Give an integer score from 0 to 5 on how funny the following sentence is.\n\nSentence: \"there was a bear then there wasn't a bear\"\nScore: 0\nSentence: \"why were the dogs named rolex and timex because they were watchdogs\"\nScore: 3\nSentence: \"yo momma is so stupid that she stared at a glass of orange juice because it said from concentrate\"\nScore: 4\nSentence: \"why did the chicken cross the road to get to the other side\"\nScore: 1\nSentence: \"what is brown and sticky a stick\"\nScore: 5\nSentence: \"im being attacked\"\nScore: 0\nSentence: \"i got fired today\"\nScore: 0\nSentence: \"i won the lottery\"\nScore: 1\nSentence: \"how do robots eat guacamole with computer chips\"\nScore: 5\nSentence: \"yeah theres no humane way to do it\"\nScore: 0\nSentence: \"what did one snowman say to the other do you smell carrots\"\nScore: 4\nSentence: \"hello how is everyone doing today\"\nScore: 0\nSentence: \"I was about to tell a bowling joke to my friend they said spare me\"\nScore: 5",
     "temperature": 0.7,
     "max_tokens": 60,
     "top_p": 1,
     "frequency_penalty": 0,
     "presence_penalty": 0,
     "stop": ["\n"]
-}
+  }
