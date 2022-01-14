@@ -8,7 +8,6 @@ export function playAudio(score: number): void {
   const track = require(`../assets/laugh_${score}.mp3`);
   const audio = new Audio(track);
 
-  console.log("playing");
   audio.volume = 0.5;
   audio.play();
 }

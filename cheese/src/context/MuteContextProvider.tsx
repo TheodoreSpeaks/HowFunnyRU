@@ -5,7 +5,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-export default function MuteContextProvider({ children }: Props) {
+export default function MuteContextProvider({ children }: Props): React.ReactElement {
   const [isMute, setIsMute] = useState(false);
 
   return (
