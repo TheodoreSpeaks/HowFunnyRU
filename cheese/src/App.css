@@ -21,6 +21,14 @@
   text-align: center;
 }
 
-.neon-button:hover {
+.neon-button:hover,
+.sound-button:hover {
   cursor: pointer;
+}
+
+.sound-button {
+  height: 32px;
+  position: absolute;
+  right: 32px;
+  top: 32px;
 }
