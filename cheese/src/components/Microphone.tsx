@@ -4,6 +4,7 @@ import SpeechRecognition, {
 } from "react-speech-recognition";
 import NeonButton from "./NeonButton";
 import { requestTranscriptHumorScore } from "../util/useGptRequest";
+import { playAudio } from "../util/useAudio";
 
 export default function Microphone(): React.ReactElement {
   const {
@@ -23,9 +24,11 @@ export default function Microphone(): React.ReactElement {
       setFullTranscript((fullTranscript) => `${fullTranscript} ${transcript}`);
       SpeechRecognition.startListening();
 
+      console.log("pause");
       requestTranscriptHumorScore(transcript).then((score) => {
         if (score != null) {
           setHumorScore(score);
+          playAudio(score);
         }
       });
     }
@@ -41,7 +44,7 @@ export default function Microphone(): React.ReactElement {
     setStartedRecording(false);
   };
 
-  const resetFullTranscript = () => {
+  const resetFullTranscript = (): void => {
     resetTranscript();
     setFullTranscript("");
     stopListening();
