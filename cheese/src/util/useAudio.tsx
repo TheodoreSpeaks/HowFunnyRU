@@ -5,7 +5,8 @@
 export function playAudio(score: number): void {
   if (score === 0) return;
 
-  const track = require(`../assets/laugh_${score}.mp3`);
+  const randomTrack = Math.floor(Math.random() * 3);
+  const track = require(`../assets/laugh_${score}_${randomTrack}.mp3`);
   const audio = new Audio(track);
 
   audio.volume = 0.5;
