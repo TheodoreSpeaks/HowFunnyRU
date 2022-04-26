@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/HowFunnyRU/static/css/main.3868a781.css",
+    "main.js": "/HowFunnyRU/static/js/main.58843109.js",
+    "static/js/787.3b0b25e3.chunk.js": "/HowFunnyRU/static/js/787.3b0b25e3.chunk.js",
+    "static/media/logo.png": "/HowFunnyRU/static/media/logo.7655818c0592e432bb1d.png",
+    "static/media/mic-on.png": "/HowFunnyRU/static/media/mic-on.f19a43ff09e30781f5bc.png",
+    "static/media/brick-background.jpg": "/HowFunnyRU/static/media/brick-background.7a13f7f9b7a043e6efcd.jpg",
+    "static/media/mic-off.png": "/HowFunnyRU/static/media/mic-off.f34871943c24f7d42dc2.png",
+    "static/media/laugh_5_1.mp3": "/HowFunnyRU/static/media/laugh_5_1.ad530f70512cc0cd48db.mp3",
+    "static/media/laugh_5_0.mp3": "/HowFunnyRU/static/media/laugh_5_0.8d446ab57493b6c8c9ae.mp3",
+    "static/media/laugh_3_1.mp3": "/HowFunnyRU/static/media/laugh_3_1.2ce895400b1ed604ab74.mp3",
+    "static/media/laugh_4_1.mp3": "/HowFunnyRU/static/media/laugh_4_1.78fe1a910cb71ed3647d.mp3",
+    "static/media/laugh_4_0.mp3": "/HowFunnyRU/static/media/laugh_4_0.ba881e1a6034d31adba7.mp3",
+    "static/media/laugh_2_2.mp3": "/HowFunnyRU/static/media/laugh_2_2.fb35193603885ac65ded.mp3",
+    "static/media/laugh_1_0.mp3": "/HowFunnyRU/static/media/laugh_1_0.eccffbdb8d2d1e6ff5f4.mp3",
+    "static/media/laugh_5_2.mp3": "/HowFunnyRU/static/media/laugh_5_2.34ad854b0e547c941677.mp3",
+    "static/media/laugh_1_1.mp3": "/HowFunnyRU/static/media/laugh_1_1.43e1809bc254b7e20abb.mp3",
+    "static/media/laugh_4_2.mp3": "/HowFunnyRU/static/media/laugh_4_2.48ec5fde0085d94019f6.mp3",
+    "static/media/laugh_2_0.mp3": "/HowFunnyRU/static/media/laugh_2_0.d11934918c032758b9aa.mp3",
+    "static/media/laugh_3_0.mp3": "/HowFunnyRU/static/media/laugh_3_0.0101d2e2b2c9790f9bc7.mp3",
+    "static/media/laugh_2_1.mp3": "/HowFunnyRU/static/media/laugh_2_1.8de5dcc74ffd1f78366f.mp3",
+    "static/media/laugh_3_2.mp3": "/HowFunnyRU/static/media/laugh_3_2.7bd7de1881b2febbf2de.mp3",
+    "static/media/laugh_1_2.mp3": "/HowFunnyRU/static/media/laugh_1_2.0cd18029508f5dfcde5f.mp3",
+    "index.html": "/HowFunnyRU/index.html",
+    "main.3868a781.css.map": "/HowFunnyRU/static/css/main.3868a781.css.map",
+    "main.58843109.js.map": "/HowFunnyRU/static/js/main.58843109.js.map",
+    "787.3b0b25e3.chunk.js.map": "/HowFunnyRU/static/js/787.3b0b25e3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3868a781.css",
+    "static/js/main.58843109.js"
+  ]
+}
