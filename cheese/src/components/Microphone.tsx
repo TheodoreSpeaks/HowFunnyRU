@@ -3,9 +3,12 @@ import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
 import NeonButton from "./NeonButton";
+import MuteButton from "./MuteButton";
 import { requestTranscriptHumorScore } from "../util/useGptRequest";
 import { playAudio } from "../util/useAudio";
 import { MuteContext } from "../context/MuteContext";
+import MicOnImage from "../assets/mic-on.png";
+import MicOffImage from "../assets/mic-off.png";
 
 export default function Microphone(): React.ReactElement {
   const {
@@ -39,6 +42,14 @@ export default function Microphone(): React.ReactElement {
     }
   }, [listening]);
 
+  const toggleListening = (): void => {
+    if (startedRecording) {
+      stopListening();
+    } else {
+      startListening();
+    }
+  }
+
   const startListening = (): void => {
     SpeechRecognition.startListening();
     setStartedRecording(true);
@@ -61,10 +72,13 @@ export default function Microphone(): React.ReactElement {
 
   return (
     <div>
-      <p>Microphone: {listening ? "on" : "off"}</p>
-      <NeonButton clickHandler={startListening}>Start</NeonButton>
+      {/* <p>Microphone: {listening ? "on" : "off"}</p> */}
+      <NeonButton clickHandler={toggleListening}>
+        <img src={startedRecording ? MicOnImage : MicOffImage} height={80} width={80}/>
+      </NeonButton>
+      {/* <NeonButton clickHandler={startListening}>Start</NeonButton>
       <NeonButton clickHandler={stopListening}>Stop</NeonButton>
-      <NeonButton clickHandler={resetFullTranscript}>Reset</NeonButton>
+      <NeonButton clickHandler={resetFullTranscript}>Reset</NeonButton> */}
       <p>
         {fullTranscript} {transcript}
       </p>
