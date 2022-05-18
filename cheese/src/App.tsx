@@ -1,12 +1,14 @@
 import React from "react";
-import "./App.css";
+
+import ApiContextProvider from "./context/ApiContextProvider";
+import ConfigForm from './components/ConfigForm';
+import Logo from './assets/logo.png'
 import Microphone from "./components/Microphone";
 import MuteContextProvider from "./context/MuteContextProvider";
-import SoundButton from "./components/SoundButton";
-import Logo from './assets/logo.png'
-import NeonButton from "./components/NeonButton";
-import ConfigForm from './components/ConfigForm';
-import ApiContextProvider from "./context/ApiContextProvider";
+// import NeonButton from "./components/NeonButton";
+// import SoundButton from "./components/SoundButton";
+
+import "./App.css";
 
 export default function App(): React.ReactElement {
 

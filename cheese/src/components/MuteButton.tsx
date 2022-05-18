@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
-import { MuteContext } from "../context/MuteContext";
-import MicOnImage from "../assets/mic-on.png";
-import MicOffImage from "../assets/mic-off.png";
+import React from "react";
+
+// import MicOnImage from "../assets/mic-on.png";
+// import MicOffImage from "../assets/mic-off.png";
 import { MouseEventHandler } from "react";
+// import { MuteContext } from "../context/MuteContext";
 
 type Props = {
   children: React.ReactNode;
